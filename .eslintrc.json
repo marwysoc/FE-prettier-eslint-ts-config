@@ -52,7 +52,7 @@
 				"propElementValues": "always"
 			}
 		],
-		"react/jsx-key": ["error", {"checkFragmentShorthand": true}],
+		"react/jsx-key": ["error", { "checkFragmentShorthand": true }],
 		"react/jsx-fragments": ["error", "syntax"],
 		"react/jsx-equals-spacing": ["error", "never"],
 		"react/jsx-closing-tag-location": ["error"],
@@ -60,7 +60,7 @@
 		"react/jsx-pascal-case": ["error"],
 		"react/jsx-boolean-value": ["error", "never"], // don't pass true value for boolean props (example of correct usage: <Component isVisible />, incorrect: <Component isVisible={true} />)
 		"react/hook-use-state": "error", // correct: [color, setColor], incorrect: [color, updateColor]
-		"react/destructuring-assignment": ["warn", "always", {"destructureInSignature": "ignore"}], // destructuring props, example: const { id, name } = props
+		"react/destructuring-assignment": ["warn", "always", { "destructureInSignature": "ignore" }], // destructuring props, example: const { id, name } = props
 		"react/jsx-handler-names": [
 			"warn",
 			{
@@ -68,8 +68,8 @@
 				"eventHandlerPropPrefix": "on"
 			}
 		],
-		"react/boolean-prop-naming": ["warn", {"validateNested": true}],
-		"react/function-component-definition": ["error", {"namedComponents": "arrow-function"}],
+		"react/boolean-prop-naming": ["warn", { "validateNested": true }],
+		"react/function-component-definition": ["error", { "namedComponents": "arrow-function" }],
 		"react/jsx-no-constructed-context-values": ["error"],
 		"react/jsx-no-leaked-render": [
 			"error",
@@ -141,7 +141,7 @@
 		"@typescript-eslint/no-use-before-define": [
 			// works only when rule no-use-before-define is off
 			"error",
-			{"ignoreTypeReferences": false}
+			{ "ignoreTypeReferences": false }
 		],
 		"@typescript-eslint/array-type": [
 			"warn",
@@ -161,7 +161,7 @@
 				"fixToUnknown": true
 			}
 		],
-    "@typescript-eslint/no-floating-promises": ["warn"],
+		"@typescript-eslint/no-floating-promises": ["warn"],
 		"@typescript-eslint/no-import-type-side-effects": ["error"],
 		"@typescript-eslint/consistent-type-imports": ["error"],
 		"@typescript-eslint/no-invalid-void-type": ["error"],
@@ -176,7 +176,7 @@
 		"no-multi-spaces": ["error"],
 		"no-unused-vars": ["error"],
 		"eqeqeq": ["error"],
-    "object-curly-spacing": ["error", "always"]
+		"object-curly-spacing": ["error", "always"]
 	},
 	"settings": {
 		"react": {
