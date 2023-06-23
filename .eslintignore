@@ -4,3 +4,7 @@ node_modules/
 package.json
 
 .env
+
+*.d.ts
+*.js
+*.js.map
