@@ -1,0 +1,186 @@
+{
+	"env": {
+		"browser": true,
+		"es2021": true,
+		"jest": true // for testing
+	},
+	"extends": [
+		"react-app",
+		"react-app/jest",
+		"eslint:recommended",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:@typescript-eslint/recommended-requiring-type-checking",
+		"plugin:react-hooks/recommended",
+		"plugin:react/recommended",
+		"plugin:react-prefer-function-component/recommended",
+		"plugin:react/jsx-runtime",
+		"plugin:prettier/recommended"
+	],
+	"parserOptions": {
+		"ecmaVersion": "latest",
+		"sourceType": "module",
+		"project": "./tsconfig.json"
+	},
+	"plugins": ["react", "@typescript-eslint", "react-prefer-function-component", "prettier"],
+	"rules": {
+		"react-hooks/rules-of-hooks": ["error"],
+		"react-hooks/exhaustive-deps": ["warn"],
+		"react/jsx-uses-react": ["off"],
+		"react/react-in-jsx-scope": ["off"],
+		"react-prefer-function-component/react-prefer-function-component": [
+			"error",
+			{
+				"allowComponentDidCatch": false,
+				"allowJsxUtilityClass": true
+			}
+		],
+		"react/display-name": ["off"],
+		"react/no-array-index-key": "error",
+		"react/require-default-props": "warn",
+		"react/jsx-closing-bracket-location": [
+			"error",
+			{
+				"selfClosing": "after-props",
+				"nonEmpty": "tag-aligned"
+			}
+		],
+		"react/jsx-curly-brace-presence": [
+			"error",
+			{
+				"props": "never",
+				"children": "never",
+				"propElementValues": "always"
+			}
+		],
+		"react/jsx-key": ["error", {"checkFragmentShorthand": true}],
+		"react/jsx-fragments": ["error", "syntax"],
+		"react/jsx-equals-spacing": ["error", "never"],
+		"react/jsx-closing-tag-location": ["error"],
+		"react/jsx-no-useless-fragment": ["error"],
+		"react/jsx-pascal-case": ["error"],
+		"react/jsx-boolean-value": ["error", "never"], // don't pass true value for boolean props (example of correct usage: <Component isVisible />, incorrect: <Component isVisible={true} />)
+		"react/hook-use-state": "error", // correct: [color, setColor], incorrect: [color, updateColor]
+		"react/destructuring-assignment": ["warn", "always", {"destructureInSignature": "ignore"}], // destructuring props, example: const { id, name } = props
+		"react/jsx-handler-names": [
+			"warn",
+			{
+				"eventHandlerPrefix": "handle",
+				"eventHandlerPropPrefix": "on"
+			}
+		],
+		"react/boolean-prop-naming": ["warn", {"validateNested": true}],
+		"react/function-component-definition": ["error", {"namedComponents": "arrow-function"}],
+		"react/jsx-no-constructed-context-values": ["error"],
+		"react/jsx-no-leaked-render": [
+			"error",
+			{
+				"validStrategies": ["ternary", "coerce"]
+			}
+		],
+		"react/jsx-no-script-url": ["error"],
+		"react/jsx-sort-props": [
+			"error",
+			{
+				"shorthandLast": true,
+				"reservedFirst": true
+			}
+		],
+		"react/no-access-state-in-setstate": ["error"], // use setState((prevState) => prevState + 1) to set state based on current state value
+		"react/no-object-type-as-default-prop": ["warn"], // consider as "error" to avoid unnecessary rerenders
+		"react/no-multi-comp": [
+			"warn",
+			{
+				"ignoreStateless": true
+			}
+		],
+		"react/no-unstable-nested-components": ["error"],
+		"react/self-closing-comp": ["error"],
+		"react/sort-prop-types": [
+			"error",
+			{
+				"callbacksLast": true,
+				"sortShapeProp": true
+			}
+		],
+		"@typescript-eslint/naming-convention": [
+			"warn",
+			{
+				"selector": "default",
+				"format": ["camelCase"]
+			},
+			{
+				"selector": "typeLike",
+				"format": ["PascalCase"]
+			},
+			{
+				"selector": "variable",
+				"format": ["camelCase", "UPPER_CASE", "PascalCase"]
+			},
+			{
+				"selector": "function",
+				"format": ["PascalCase", "camelCase"]
+			},
+			{
+				"selector": "parameter",
+				"format": ["camelCase"],
+				"leadingUnderscore": "allow"
+			}
+		],
+		"@typescript-eslint/explicit-function-return-type": ["warn"],
+		"@typescript-eslint/explicit-module-boundary-types": ["warn"],
+		"@typescript-eslint/member-delimiter-style": [
+			"error",
+			{
+				"multiline": {
+					"delimiter": "none",
+					"requireLast": false
+				}
+			}
+		],
+		"no-use-before-define": "off",
+		"@typescript-eslint/no-use-before-define": [
+			// works only when rule no-use-before-define is off
+			"error",
+			{"ignoreTypeReferences": false}
+		],
+		"@typescript-eslint/array-type": [
+			"warn",
+			{
+				"default": "array",
+				"readonly": "array"
+			}
+		],
+		"@typescript-eslint/consistent-indexed-object-style": ["error"], // type Foo = Record<string, unknown>
+		"@typescript-eslint/consistent-type-definitions": ["error"], //  enforce using interfaces for object type definitions
+		"@typescript-eslint/method-signature-style": ["error", "property"], // func: (arg: string) => number
+		"@typescript-eslint/no-duplicate-enum-values": ["error"],
+		"@typescript-eslint/no-duplicate-type-constituents": ["error"],
+		"@typescript-eslint/no-explicit-any": [
+			"error",
+			{
+				"fixToUnknown": true
+			}
+		],
+    "@typescript-eslint/no-floating-promises": ["warn"],
+		"@typescript-eslint/no-import-type-side-effects": ["error"],
+		"@typescript-eslint/consistent-type-imports": ["error"],
+		"@typescript-eslint/no-invalid-void-type": ["error"],
+		"@typescript-eslint/no-non-null-asserted-nullish-coalescing": ["error"],
+		"@typescript-eslint/no-non-null-assertion": ["error"],
+		"@typescript-eslint/no-unnecessary-condition": ["error"],
+		"@typescript-eslint/no-unnecessary-qualifier": ["error"],
+		"@typescript-eslint/prefer-enum-initializers": ["warn"],
+		"@typescript-eslint/prefer-function-type": ["error"],
+		"@typescript-eslint/prefer-nullish-coalescing": ["warn"],
+		"@typescript-eslint/prefer-optional-chain": ["warn"],
+		"no-multi-spaces": ["error"],
+		"no-unused-vars": ["error"],
+		"eqeqeq": ["error"],
+    "object-curly-spacing": ["error", "always"]
+	},
+	"settings": {
+		"react": {
+			"version": "detect"
+		}
+	}
+}
